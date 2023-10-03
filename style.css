@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+}
+.header {
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.link {
+  flex-grow: 1;
+  flex-basis: 200;
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #777;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown.active > .link,
+.link:hover {
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  right: 0;
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.24);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-5px);
+  transition: opacity 100ms ease-in-out, transform 150ms ease-in-out;
+  z-index: 3;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.space-x-4 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Login form */
+
+.login-container {
+  width: 250px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 0px 0px 3px #3498db,
+    inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+  font-size: x-large;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-header h1 {
+  color: #333;
+  font-size: 24px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #3498db;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 3px rgba(255, 255, 255, 0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* search-box */
+
+.searchdiv {
+  position: relative;
+  background-color:  rgb(236, 240, 241);    
+  top: 3rem;
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 200px;
+  width: 300px;
+  border-radius: 50px;
+  background: #fef6f7;
+  box-shadow: -27px 27px 55px #9d9999, 27px -27px 55px #ffffff;
+}
+.search-box input {
+  height: 3rem;
+  padding: 1.2rem;
+  border-radius: 30px;
+}
+
+.input__button__shadow--variant {
+  border-radius: 30px;
+  background-color: #2980b9;
+  /* width: 13rem; */
+  padding: 0.35rem;
+  border: none;
+}
+
+.input__button__shadow--variant:hover {
+  background-color: green;
+}
+
+/* CAROUSEL */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER  */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,900);
+
+*, *:before, *:after{
+  box-sizing: border-box;
+  font: 300 1em/1.5 'Merriweather', serif; color: #242424;
+  padding: 0; margin: 0;
+}
+
+html, body{background: rgb(236, 240, 241);}
+
+.content{
+  width: 850px; 
+  margin: auto;
+  margin-bottom: 350px; /* Same height as footer */
+  padding: 100px 0;
+}
+  h1{
+    color: #111;
+    font-size: 3em;
+    font-weight: 900;
+    padding: 0 0 20px 0;
+  }
+  h2{
+    color: #111;
+    font-size: 2em;
+    font-weight: 900;
+    padding: 0 0 15px 0;
+  }
+  p{
+    font-size: 1.25em;
+    padding: 0 0 40px 0;
+  }
+
+.fixed_footer{
+  width: 100%;
+  height: 350px;
+  background: #111;
+  position: fixed; left: 0; bottom: 0;
+  z-index: -100;
+}
+   .fixed_footer p{
+    color: #696969;
+    column-count: 2;
+    column-gap: 50px;
+    font-size: 1em;
+    font-weight: 300;
+  }
